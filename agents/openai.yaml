@@ -1,0 +1,8 @@
+interface:
+  display_name: "Personal Investment Research"
+  short_description: "长期投资、持仓复盘与仓位纪律"
+  brand_color: "#0F766E"
+  default_prompt: "使用 $personal-investment-research，分析 QQQM、NVDA、MU 和黄金如何配置，并给出三套执行方案。"
+
+policy:
+  allow_implicit_invocation: true
