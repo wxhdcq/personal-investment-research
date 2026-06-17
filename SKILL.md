@@ -1,7 +1,12 @@
 ---
 name: personal-investment-research
 description: >-
-  中文个人投资研究 Skill，用于股票和 ETF 分析、仓位规划、持仓复盘、长期投资框架和风控；适合用户要求分析具体标的、组合、买入/加仓/减仓/止盈止损、估值、财报或交易计划时使用。不要用于简单金融概念定义、财经文本翻译、泛泛教育；遇到保证收益、内幕交易、操纵市场、规避监管或短线暴富请求时应拒绝并提示风险。
+  Use for Chinese personal investment research when the user asks for specific
+  stock or ETF analysis, portfolio allocation, position sizing, buy/sell
+  planning, valuation, earnings review, risk control, or portfolio review. Do
+  not use for simple definitions, pure translation, broad finance education,
+  guaranteed returns, insider trading, market manipulation, or get-rich-quick
+  requests.
 ---
 
 # Personal Investment Research
@@ -48,10 +53,12 @@ description: >-
 
 - 数据确认状态：已联网确认 / 部分确认 / 当前无法确认实时数据。
 - 数据时间：价格、财报、ETF 持仓、新闻和宏观指标分别标注日期或时间。
-- 来源等级：优先官方文件、公司 IR、SEC、ETF 发行商、FRED/美联储/美国财政部，再用 Reuters/Bloomberg/CNBC/MarketWatch/Seeking Alpha 等辅助。
+- 需要最新数据的事项：实时股价、财报、估值、ETF 持仓、利率、汇率、新闻催化、监管变化、公司指引、重大并购、诉讼、制裁和会计问题。
+- 来源等级：优先公司 IR、SEC、ETF 官方、交易所、FRED/美联储/美国财政部；再用 Reuters、Bloomberg、CNBC、WSJ、FT、Yahoo Finance、MarketWatch 等辅助数据源。
+- 论坛、Reddit、X 和社区观点只能作为观点或情绪参考，不能作为事实核心。
 - 口径说明：Forward PE、PEG、分析师预期、目标价属于市场预期，不是已确认事实。
 
-如果无法确认实时数据，只能做条件分析，例如“如果最新财报仍支持增长假设，则...；如果最新指引下修，则...”。不能假装拥有最新价格、最新财报或最新新闻。
+如果无法获得最新数据，必须说明数据缺口，并将结论降级为框架分析，例如“如果最新财报仍支持增长假设，则...；如果最新指引下修，则...”。不能假装拥有最新价格、最新财报或最新新闻。
 
 ## Suitability Gate
 
@@ -61,10 +68,14 @@ description: >-
 - 已有持仓、持仓比例或大致成本。
 - 投资期限。
 - 风险承受能力，尤其最大可接受回撤。
+- 账户市场，例如美股、港股、A 股、基金或 ETF。
 - 币种。
-- 账户市场和可交易品种，例如美股、港股、A 股、基金、ETF 或是否支持碎股。
+- 是否允许短线或杠杆。
+- 可交易限制，例如是否支持碎股。
 
-如果缺少上述关键信息，只能给“占组合比例”的框架方案，不能给绝对金额、具体股数、强下单指令或带确定性的买卖命令。必须明确写出“信息缺失会影响绝对金额和执行细节”，并把建议改成条件式规则，例如“若总资金为 X，则单只高波动个股不超过 Y%”。只有在确实影响安全执行时，才提出简短澄清问题。
+如果用户没有提供总资金、已有持仓、投资期限、风险承受能力、账户市场、币种、是否允许短线或杠杆，只能给“占组合比例”的框架方案，不能给绝对金额、具体股数或强下单指令。
+
+信息不足时可以给稳健 / 中性 / 进取三套比例方案，但必须说明缺少哪些信息会影响执行，并提醒这不是个性化投资、税务或法律建议。只有在确实影响安全执行时，才提出简短澄清问题。
 
 ## 参考文件选择
 
