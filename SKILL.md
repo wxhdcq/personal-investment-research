@@ -1,7 +1,7 @@
 ---
 name: personal-investment-research
 description: >-
-  Use for personal investment research and portfolio planning in Chinese: 投资分析、美股、ETF、QQQM、QQQ、SPY、VOO、NVDA、MSFT、META、MU、TSM、AVGO、ORCL、TSLA、INTC、DRAM、半导体、HBM、AI、云计算、广告业务、企业软件、数据中心、黄金、短债、现金、低波动 ETF、仓位、加仓、减仓、止盈、止损、资产配置、长期投资、财报分析、估值分析、买入计划、交易计划、持仓复盘、买入区间、组合再平衡、暴涨原因、现在能不能买、二选一。Use it to build a disciplined judgment framework with facts, sources, market expectations, inference, execution plan, and invalidation conditions. Do not use for simple definitions, pure translation, or broad education without a specific analysis request. Refuse insider trading, market manipulation, evading regulation, guaranteed returns, risk-free profit, leverage/all-in/short-term get-rich promises.
+  中文个人投资研究 Skill，用于股票和 ETF 分析、仓位规划、持仓复盘、长期投资框架和风控；适合用户要求分析具体标的、组合、买入/加仓/减仓/止盈止损、估值、财报或交易计划时使用。不要用于简单金融概念定义、财经文本翻译、泛泛教育；遇到保证收益、内幕交易、操纵市场、规避监管或短线暴富请求时应拒绝并提示风险。
 ---
 
 # Personal Investment Research
@@ -36,10 +36,11 @@ description: >-
 
 1. 识别问题类型：单标的研究、现在能不能买、持仓规划、二选一、ETF vs 个股、暴涨原因、止盈止损、财报复盘、长期投资观念。
 2. 做数据门禁：涉及实时股价、财报、新闻、估值、利率、汇率、ETF 持仓、公司指引时，必须先获取最新数据并标注来源；无法确认时写“当前无法确认实时数据”。
-3. 读取对应参考文件：只加载当前任务需要的文件，避免把所有参考一次性塞进上下文。
-4. 分离事实和判断：每个投资结论都要区分“已确认事实、数据来源、市场预期、我的推断、执行方案、判断失效条件”。
-5. 输出可执行动作：给买入/卖出比例、分批节奏、保留现金比例、加仓条件、减仓条件、下次复盘点。
-6. 最后做人话总结：说清现在最该做什么、最不该做什么、适合长期持有还是阶段性参与。
+3. 做 suitability gate：先判断用户是否提供了足够的个人组合背景，再决定能否给绝对金额和股数。
+4. 读取对应参考文件：只加载当前任务需要的文件，避免把所有参考一次性塞进上下文。
+5. 分离事实和判断：每个投资结论都要区分“已确认事实、数据来源、市场预期、我的推断、执行方案、判断失效条件”。
+6. 输出可执行动作：给买入/卖出比例、分批节奏、保留现金比例、加仓条件、减仓条件、下次复盘点。
+7. 最后做人话总结：说清现在最该做什么、最不该做什么、适合长期持有还是阶段性参与。
 
 ## 数据门禁
 
@@ -51,6 +52,19 @@ description: >-
 - 口径说明：Forward PE、PEG、分析师预期、目标价属于市场预期，不是已确认事实。
 
 如果无法确认实时数据，只能做条件分析，例如“如果最新财报仍支持增长假设，则...；如果最新指引下修，则...”。不能假装拥有最新价格、最新财报或最新新闻。
+
+## Suitability Gate
+
+给执行方案前先检查用户是否提供：
+
+- 总资金或本次可投入资金。
+- 已有持仓、持仓比例或大致成本。
+- 投资期限。
+- 风险承受能力，尤其最大可接受回撤。
+- 币种。
+- 账户市场和可交易品种，例如美股、港股、A 股、基金、ETF 或是否支持碎股。
+
+如果缺少上述关键信息，只能给“占组合比例”的框架方案，不能给绝对金额、具体股数、强下单指令或带确定性的买卖命令。必须明确写出“信息缺失会影响绝对金额和执行细节”，并把建议改成条件式规则，例如“若总资金为 X，则单只高波动个股不超过 Y%”。只有在确实影响安全执行时，才提出简短澄清问题。
 
 ## 参考文件选择
 
